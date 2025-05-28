@@ -1,0 +1,63 @@
+<nav
+  class="navbar navbar-expand-md bg-light border-bottom shadow-sm sticky-top"
+>
+  <div class="container-fluid py-2">
+    <!-- Brand Logo and Name -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+      <i class="fas fa-bed" style="color: #ff5a5f; font-size: 1.8rem"></i>
+      <span
+        style="
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #ff5a5f;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        "
+      >
+        Stay<span style="color: #212529">Nest</span>
+      </span>
+    </a>
+
+    <!-- Toggler Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <!-- Left Side Nav Links -->
+      <div class="navbar-nav">
+        <a class="nav-link px-3 text-dark fw-semibold" href="/listings"
+          >Explore</a
+        >
+        <a class="nav-link px-3 text-dark fw-semibold" href="/listings/new"
+          >List your home</a
+        >
+      </div>
+
+      <!-- Right Side User Actions -->
+      <div class="ms-auto d-flex align-items-center gap-2">
+        <% if (!currUser) { %>
+        <a href="/login" class="btn btn-login btn-sm rounded-pill fw-semibold"
+          >Log In</a
+        >
+        <a
+          href="/signup"
+          class="btn btn-signup btn-sm rounded-pill fw-semibold ms-2"
+          >Sign Up</a
+        >
+        <% } else { %>
+        <a
+          href="/logout"
+          class="btn btn-sm btn-outline-danger rounded-pill fw-bold"
+          >Log Out</a
+        >
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
